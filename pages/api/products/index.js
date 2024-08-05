@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     const { method , cookies } = req;
 
     const token = cookies.token;
-   dbConnect()
+  await  dbConnect()
     if(method === "GET"){
         try {
             const prods= await Product.find()
@@ -25,6 +25,7 @@ export default async function handler(req, res) {
             res.status(201).json(prod)
         }catch(err){
             res.status(500).json(err);
+            console.log(err)
         }
     }
 }
