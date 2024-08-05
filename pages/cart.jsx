@@ -60,8 +60,7 @@ const Cart = () => {
               <div className={styles.imgContainer}>
                 <Image
                   src={product.img}
-                  layout="fill"
-                  objectFit="cover"
+                  layout="fill" objectFit="contain"
                   alt=""
                 />
               </div>
