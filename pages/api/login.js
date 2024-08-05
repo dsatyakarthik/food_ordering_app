@@ -20,6 +20,8 @@ const handler = (req, res) => {
       res.status(400).json("Wrong Credentials!");
     }
   }
+
+ // if(req.method === "DELETE"){token="";}
 };
 
 export default handler;
